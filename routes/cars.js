@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const carData = require('../data/cars.json')
 
-// {"id":4,"name":"ford torino","mpg":"17","weight":"3449","origin":"usa","year":"1970"}
 router.post('/', (req, res, next) => {
   console.log("post /cars")
   if(!req.query.name || !req.query.mpg || !req.query.weight || !req.query.origin || !req.query.year){
